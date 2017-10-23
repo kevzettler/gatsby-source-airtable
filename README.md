@@ -6,7 +6,7 @@ Gatsby source plugin for pulling rows from an Airtable.
 
 `npm install --save gatsby-source-airtable`
 
-## Usage
+## How to use
 
 ```javascript
 // In gatsby-config.js
@@ -21,4 +21,21 @@ plugins: [
     }
   },
 ]
+```
+
+## How to Query
+```
+{
+  allAirtable {
+    edges {
+      node {
+        id
+        Caption
+        Photo{
+          url
+        }
+      }
+    }
+  }
+}
 ```
