@@ -1,6 +1,6 @@
 {
   "name": "gatsby-source-airtable",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "author": "Kev Zettler",
   "license": "MIT",
   "description": "A Gatsby source plugin to fetch data from Airtable",
