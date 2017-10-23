@@ -1,0 +1,31 @@
+{
+  "name": "gatsby-source-airtable",
+  "version": "0.0.1",
+  "author": "Kev Zettler",
+  "license": "MIT",
+  "description": "A Gatsby source plugin to fetch data from Airtable",
+  "repository": "kevzettler/gatsby-source-airtable",
+  "main": "gatsby-node.js",
+  "scripts": {
+    "start": "babel src --out-dir .",
+    "precommit": "lint-staged",
+    "release": "yarn start && yarn publish"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.0",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.2.3",
+    "prettier": "^1.7.4"
+  },
+  "lint-staged": {
+    "*.{js,json,css}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "dependencies": {
+    "airtable": "^0.5.0",
+    "crypto": "^1.0.1"
+  }
+}
