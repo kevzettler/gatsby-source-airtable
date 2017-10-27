@@ -27,7 +27,7 @@ exports.sourceNodes = async ({ boundActionCreators },
   all.forEach(row => {
     const gatsbyNode = Object.assign({
       // Required Gatsby fields
-      id: `Airtable ${tableName} ${row.fields.Id}`,
+      id: `Airtable ${tableName} ${row.id}`,
       parent: "__SOURCE__",
       children: [],
       internal: {
