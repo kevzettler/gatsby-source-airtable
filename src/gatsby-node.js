@@ -2,7 +2,7 @@ const Airtable = require('airtable')
 const crypto = require(`crypto`)
 
 exports.sourceNodes = async ({ boundActionCreators },
-                             {apiKey, baseId, tableName, tableView}) => {
+                             {apiKey, baseId, tableName, tableView, queryName}) => {
   const { createNode, setPluginStatus } = boundActionCreators
   const base = new Airtable({
     apiKey,
@@ -27,11 +27,11 @@ exports.sourceNodes = async ({ boundActionCreators },
   all.forEach(row => {
     const gatsbyNode = Object.assign({
       // Required Gatsby fields
-      id: `Airtable ${tableName} ${row.id}`,
+      id: `${row.id}`,
       parent: "__SOURCE__",
       children: [],
       internal: {
-        type: "Airtable",
+        type: `Airtable${queryName}`,
         contentDigest: crypto
           .createHash("md5")
           .update(JSON.stringify(row))
