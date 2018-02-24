@@ -11,7 +11,8 @@ exports.sourceNodes = function () {
     var apiKey = _ref2.apiKey,
         baseId = _ref2.baseId,
         tableName = _ref2.tableName,
-        tableView = _ref2.tableView;
+        tableView = _ref2.tableView,
+        queryName = _ref2.queryName;
     var createNode, setPluginStatus, base, table, query, all;
     return regeneratorRuntime.wrap(function _callee$(_context) {
       while (1) {
@@ -50,11 +51,11 @@ exports.sourceNodes = function () {
             all.forEach(function (row) {
               var gatsbyNode = Object.assign({
                 // Required Gatsby fields
-                id: "Airtable " + tableName + " " + row.fields.Id,
+                id: row.fields.Id,
                 parent: "__SOURCE__",
                 children: [],
                 internal: {
-                  type: "Airtable",
+                  type: "Airtable" + queryName,
                   contentDigest: crypto.createHash("md5").update(JSON.stringify(row)).digest("hex")
                 }
               }, row.fields);
