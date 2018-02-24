@@ -51,7 +51,7 @@ exports.sourceNodes = function () {
             all.forEach(function (row) {
               var gatsbyNode = Object.assign({
                 // Required Gatsby fields
-                id: row.fields.Id,
+                id: row.id,
                 parent: "__SOURCE__",
                 children: [],
                 internal: {
