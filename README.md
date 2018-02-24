@@ -17,7 +17,8 @@ plugins: [
       apiKey: `YOUR_AIRTABLE_KEY`,
       baseId: `YOUR_AIRTABLE_BASE_ID`,
       tableName: `YOUR_AIRTABLE_NAME`,
-      tableView: `YOUR_AIRTABLE_VIEW_NAME`
+      tableView: `YOUR_AIRTABLE_VIEW_NAME`,
+      queryName: `OPTIONAL_NAME_TO_IDENTIFY_TABLE`
     }
   },
 ]
@@ -26,7 +27,7 @@ plugins: [
 ## How to Query
 ```
 {
-  allAirtable {
+  allAirtable(QueryName) {
     edges {
       node {
         id
