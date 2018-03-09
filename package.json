@@ -4,6 +4,10 @@
   "author": "Kev Zettler",
   "license": "MIT",
   "description": "A Gatsby source plugin to fetch data from Airtable",
+  "keywords": [
+    "gatsby",
+    "gatsby-plugin"
+  ],
   "repository": "kevzettler/gatsby-source-airtable",
   "main": "gatsby-node.js",
   "scripts": {
