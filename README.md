@@ -24,6 +24,11 @@ plugins: [
 ]
 ```
 
+### Multiple tables
+Multiple tables can be configured by adding additional plugin configurations. Unfortunately, this does not enable cross base querying.
+see: https://github.com/kevzettler/gatsby-source-airtable/issues/8
+
+
 ## How to Query
 ```
 {
