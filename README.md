@@ -1,4 +1,4 @@
-# gatsby-source-airtable
+# Deprecated: ~~gatsby-source-airtable~~
 ## We are combining namespaces. This repo is deprecated in favor of [jbolda/gatsby-source-airtable](https://github.com/jbolda/gatsby-source-airtable) for Gatsby v2+. The change will be transparent to npm, but all documentation and any new issues should be created at the new github repo.
 
 Gatsby source plugin for pulling rows from an Airtable.
